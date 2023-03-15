@@ -25,14 +25,14 @@ enemy_x = []
 enemy_y= []
 enemy_y_change= []
 enemy_x_change= []
-nums_of_enemies= 5
+nums_of_enemies= 6
 for i in range(nums_of_enemies):
     # enemy.append(pygame.image.load('enemy2.png'))
     enemy.append(pygame.transform.scale(pygame.image.load('stuff/enemy2.png'),(70,35)))
     enemy_x.append(randint(4,725))
     enemy_y.append(10) 
-    enemy_y_change.append(30)
-    enemy_x_change.append(1)
+    enemy_y_change.append(60)
+    enemy_x_change.append(2)
 #----------------------------------------------------------------
 bullet = pygame.image.load('stuff/bullet.png')
 bullet = pygame.transform.scale(bullet,(30,40))
@@ -99,7 +99,7 @@ while run:
     space_ship_x += space_ship_x_change
 #---------------------------------------------------------------------
     for i in range(nums_of_enemies):
-        if enemy_y[i]> 610:
+        if enemy_y[i]> 580:
             for j in range(nums_of_enemies):
                 enemy_y[i] = 1000
             game_over_text()
